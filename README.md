@@ -9,7 +9,7 @@ OpenTenki is an open-source, affordable, and precise weather station hardware pl
 - Accurate environmental sensing with:  
   - VEML7700 (ambient light sensor)  
   - BME688 (temperature, humidity, pressure, air quality)  
-  - HDH3022 (particulate matter sensor)  
+  - HDH3022 (Temperature, humidity)  
   - Neopixel for status indication  
   - User buttons for control  
 - Based on ESP32-S3 mini for robust Wi-Fi connectivity  
@@ -53,4 +53,4 @@ OpenTenki is licensed under the Apache License 2.0. See [LICENSE](LICENSE) for d
 
 ## Contact
 
-For questions or discussions, open an issue or contact [your email or other contact info].
+For questions or discussions, open an issue or contact diegozalezz@gmail.com.
