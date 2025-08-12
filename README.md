@@ -1,4 +1,4 @@
-# OpenTenki
+# OpenTenki 🚧Construction in progress🚧
 
 OpenTenki is an open-source, affordable, and precise weather station hardware platform featuring an ESP32-S3 mini and multiple environmental sensors. It is designed for hobbyists and is compatible with ESPHome and Tasmota firmware, enabling easy integration with home automation systems via MQTT or Matter protocols.
 
@@ -21,7 +21,7 @@ OpenTenki is an open-source, affordable, and precise weather station hardware pl
 
 ## Getting Started
 
-### Hardware
+### Hardware Pending
 
 - See the [schematics](link-to-schematics) and [PCB design files](link-to-pcb-files) in the `/hardware` directory.  
 - Bill of Materials (BOM) is available in `/docs/BOM.md`.
