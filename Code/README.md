@@ -9,6 +9,6 @@ The implemantation is fully with EspHome, the .yaml is working great, Is the way
 
 ## Tasmota Coming Soon
 
-The boar is compatible with tasmota but Tasmota does not fully support the ESP32-s3 as of now there can be some errors, Im in the procces of finishing the configuration and uploadit 
+The board is compatible with tasmota but Tasmota does not fully support the ESP32-s3 as of now there can be some errors, Im in the procces of finishing the configuration and uploadit 
 
 ## Arduino Coming Soon
