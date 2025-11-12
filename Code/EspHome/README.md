@@ -7,4 +7,4 @@ Is impotarnt that you change the Home Assistant encription key and also to have 
 
 ### 1. Prepare Home Assitant:
 
-Perpare ESPHome in Home assistant, you can follow this gide:[HA oficial gide](https://www.home-assistant.io/integrations/esphome/)
+Perpare ESPHome in Home assistant, you can follow this gide: [HA oficial gide](https://www.home-assistant.io/integrations/esphome/)
