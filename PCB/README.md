@@ -1,5 +1,6 @@
 # OpenTenki PCB
 <img src="./Media/PCB_CloseUp.jpg" width="400" alt="PCB picture">
+![PCB picture](./Media/PCB_CloseUp.jpg)
 
 The components i have chose are:
 ## Microcontroler
