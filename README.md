@@ -7,7 +7,7 @@
     </p>
     </td>
     <td >
-      <img src="Media/OpenTenkiComplete.jpg" width="600" alt="OpenTenki Picture">
+      <img src="Media/OpenTenkiComplete.jpg" width="800" alt="OpenTenki Picture">
     </td>
   </tr>
 </table>
