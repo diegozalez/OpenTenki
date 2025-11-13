@@ -6,9 +6,14 @@
     </p>
   </div>
   <div style="flex: 1; text-align: right;">
-    <img src="Media/OpenTenkiComplete.jpg" width="400" alt="OpenTenki Picture">
+    <img src="Media/OpenTenkiComplete.jpg" width="250" alt="OpenTenki Picture">
   </div>
 </div>
+<p align="left">
+  <img src="Media/OpenTenkiComplete.jpg" width="200" alt="OpenTenki Picture">
+   OpenTenki is an open-source, affordable, and precise weather station hardware platform featuring an ESP32-S3 mini and multiple environmental sensors. It is designed for hobbyists and is compatible with ESPHome and Tasmota firmware, enabling easy integration with home automation systems via MQTT or Matter protocols.
+    </p>
+</p>
 
 ---
 
