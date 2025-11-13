@@ -1,6 +1,7 @@
 # OpenTenki PCB
 <img src="../Media/PCB_CloseUp.jpg" width="400" alt="PCB picture">
 The components i have chose are:
+
 ## Microcontroler
   ### ESP32-s3-mini N4R2
   This ic is great because with a small form-factor it has WiFi, Bluetooth, USB otg, 4Mb of Quad Flash, 2Mb of Quad PSRAM. And that compatible with EspHome, Tasmota, Arduino, CircuitPython and MicroPython.
