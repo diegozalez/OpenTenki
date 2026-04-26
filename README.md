@@ -1,62 +1,83 @@
-# OpenTenki 🚧Construction in progress🚧
+# OpenTenki 🚧 Construction in progress 🚧
+
 <table>
   <tr>
     <td style="vertical-align: middle;">
-     <p >
-      OpenTenki is an open-source, affordable, and precise weather station hardware platform featuring an ESP32-S3 mini and multiple environmental sensors. It is designed for hobbyists and is compatible with ESPHome and Tasmota firmware, enabling easy integration with home automation systems via MQTT or Matter protocols.
-    </p>
+      <p>
+        OpenTenki is an open-source, affordable, and precise indoor weather station
+        hardware platform built around an ESP32-S3 mini and multiple environmental
+        sensors. It is designed for hobbyists and is compatible with ESPHome and
+        Tasmota firmware, enabling easy integration with home automation systems
+        via MQTT or Matter.
+      </p>
     </td>
     <td>
       <img src="Media/OpenTenkiComplete.jpg" alt="OpenTenki Picture">
     </td>
   </tr>
 </table>
+
 ---
 
 ## Features
 
-- Accurate environmental sensing with:  
-  - VEML7700 (ambient light sensor)  
-  - BME688 (temperature, humidity, pressure, air quality)  
-  - HDH3022 (Temperature, humidity)  
-  - Neopixel for status indication  
-  - User buttons for control  
-- Based on ESP32-S3 mini for robust Wi-Fi connectivity  
-- Fully open-source hardware and software  
-- Designed for easy customization and extension  
-- Supports MQTT and Matter protocols for data transmission  
+- Accurate environmental sensing with:
+  - VEML7700 (ambient light, infrared and full-spectrum light)
+  - BME688 (temperature, humidity, pressure, air quality)
+  - HDC3022 (high-precision temperature and humidity)
+  - WS2812C (NeoPixel) status LED
+  - User button for control and feedback
+- Based on the ESP32-S3 mini for robust Wi-Fi and Bluetooth connectivity
+- Fully open-source hardware and software
+- Designed for easy customization and extension
+- Supports MQTT and Matter protocols for data transmission
+
+---
+
+## Repository Structure
+
+- [`PCB/`](PCB) — Schematic, Gerber files, EasyEDA project and PCB renders
+- [`Code/`](Code) — Firmware integrations (ESPHome, Tasmota, more coming)
+- [`Case3D/`](Case3D) — 3D-printable case files
+- [`Media/`](Media) — Photos and renders of the board and case
 
 ---
 
 ## Getting Started
 
-### Hardware Pending
+### Hardware
 
-- See the [schematics](link-to-schematics) and [PCB design files](link-to-pcb-files) in the `/hardware` directory.  
-- Bill of Materials (BOM) is available in `/docs/BOM.md`.
+- See the [schematic](PCB/SchematicV2.pdf), the [PCB preview](PCB/PCB_OpenTenki.pdf)
+  and the [Gerber files](PCB/Gerber_PCB2_2026-04-26) in the [`PCB/`](PCB) folder.
+- The full EasyEDA project (`OpenTenkiEasyEda.eprj`) is included so you can open,
+  modify and re-export the design.
 
 ### Firmware
 
-- Compatible with [ESPHome](https://esphome.io/) and [Tasmota](https://tasmota.github.io/) out of the box.  
-- Custom firmware in development — contributions welcome!
+- Compatible with [ESPHome](https://esphome.io/) and
+  [Tasmota](https://tasmota.github.io/) out of the box.
+- Custom firmware (Arduino, etc.) is in development — contributions welcome!
 
 ### Usage
 
-1. Flash ESPHome or Tasmota firmware configured for OpenTenki sensors.  
-2. Connect the board to power and Wi-Fi.  
-3. Integrate sensor data with your home automation platform via MQTT or Matter.
+1. Flash ESPHome or Tasmota firmware configured for OpenTenki sensors
+   (see [`Code/EspHome/`](Code/EspHome) for a ready-to-use YAML).
+2. Connect the board to power and Wi-Fi.
+3. Integrate the sensor data with your home automation platform via MQTT or Matter.
 
 ---
 
 ## Contributing
 
-Contributions, bug reports, and feature requests are more than welcome! Please open issues or pull requests on GitHub.
+Contributions, bug reports and feature requests are more than welcome! Please
+open an issue or a pull request on GitHub.
 
 ---
 
 ## License
 
-OpenTenki is licensed under the Apache License 2.0. See [LICENSE](LICENSE) for details.
+OpenTenki is licensed under the Apache License 2.0. See [LICENSE](LICENSE) for
+details.
 
 ---
 

@@ -1,0 +1,245 @@
+esphome:
+  name: opentenki-v2
+  friendly_name: OpenTenki_v2
+  on_boot:
+    - priority: 600
+      then:
+        - logger.log: "First Boot"
+        - script.execute: led_blue_blink
+        - delay: 20s
+        - script.execute: led_status_script
+
+
+esp32:
+  board: adafruit_feather_esp32s3
+  framework:
+    type: esp-idf
+  cpu_frequency: 80MHz
+
+
+# Enable logging
+logger:
+
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "iHoU0qKRK1Fompx4+k6X/awJ/K7FVuPgAIsV7tkNat4="
+
+ota:
+  - platform: esphome
+    password: "aac6b9fbe54c93224300b730235b287a"
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+  power_save_mode: HIGH
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Opentenki-Armario"
+    password: "opentenkiCA"
+
+captive_portal:
+
+
+external_components:
+  - source: github://HarpalPannu/hdc302x-esphome
+    components: [hdc302x]
+
+# --- I2C bus (SDA=3, SCL=4) ---
+i2c:
+  sda: 3
+  scl: 4
+  scan: true
+
+
+bme68x_bsec2_i2c:
+  id: bme68x_ai
+  address: 0x77
+  model: bme688
+  operating_age: 28d
+  sample_rate: ULP             # ULP = every ~5 min, reduces self-heating significantly
+  supply_voltage: 3.3V
+  state_save_interval: 6h
+
+
+# ============================================
+# Sensors: BME688, VEML7700, HDC3022, Thermistor
+# ============================================
+
+sensor:
+  # --- BME688 via BSEC2 (timing controlled by sample_rate: ULP above) ---
+  - platform: bme68x_bsec2
+    bme68x_bsec2_id: bme68x_ai
+    temperature:
+      name: "BME688 Temperature"
+    pressure:
+      name: "Pressure"
+    humidity:
+      name: "BME688 Humidity"
+    gas_resistance:
+      name: "Gas Resistance"
+      unit_of_measurement: "Ω"
+    iaq:
+      name: "IAQ"
+      id: bme688_iaq
+    co2_equivalent:
+      name: "CO2 Equivalent"
+    breath_voc_equivalent:
+      name: "Breath VOC Equivalent"
+
+  # --- VEML7700 Lux sensor ---
+  - platform: veml7700
+    address: 0x10
+    update_interval: 300s      # 5 min
+    ambient_light: "Ambient Light"
+    full_spectrum: "Full Spectrum"
+    infrared: "Infrared"
+
+  # --- HDC3022 Temperature & Humidity ---
+  - platform: hdc302x
+    update_interval: 300s      # 5 min
+    address: 0x44
+    temperature:
+      name: "Temperature"
+      id: hdc302x_temperature
+    humidity:
+      name: "Humidity"
+      id: hdc302x_humidity
+
+  # --- WiFi signal (kept faster for diagnostics) ---
+  - platform: wifi_signal
+    name: "WiFi Signal dB"
+    id: wifi_signal_db
+    update_interval: 300s      # 5 min
+    entity_category: "diagnostic"
+
+  # --- ESP32 internal die temperature ---
+  - platform: internal_temperature
+    name: "Internal Temperature"
+    id: internal_temp
+    update_interval: 300s      # 5 min
+
+  # ============================================
+  # NTCLE100E3103HB0A Thermistor on GPIO10
+  # Voltage divider: 3.3V → 10kΩ → GPIO10 → Thermistor → GND
+  # Lead thermistor = best ambient reference
+  # ============================================
+  - platform: adc
+    pin: GPIO10
+    id: thermistor_voltage
+    name: "Thermistor Raw Voltage"
+    attenuation: 12db          # Full 0–3.3V range on ESP32-S3
+    update_interval: 300s      # 5 min
+    internal: true
+
+  - platform: resistance
+    id: thermistor_resistance
+    sensor: thermistor_voltage
+    configuration: DOWNSTREAM  # Thermistor is between pin and GND
+    resistor: 10kΩ
+    internal: true
+
+  - platform: ntc
+    sensor: thermistor_resistance
+    name: "Thermistor Temperature"
+    unit_of_measurement: "°C"
+    accuracy_decimals: 1
+    icon: "mdi:thermometer"
+    calibration:
+      # Steinhart-Hart B-parameter for NTCLE100E3103HB0A (Vishay datasheet)
+      b_constant: 3977
+      reference_temperature: 25°C
+      reference_resistance: 10kΩ
+
+
+# --- IAQ accuracy text sensor ---
+text_sensor:
+  - platform: bme68x_bsec2
+    bme68x_bsec2_id: bme68x_ai
+    iaq_accuracy:
+      name: "IAQ Accuracy"
+
+
+# ===========================
+# WS2812C RGB Status LED
+# ===========================
+
+light:
+  - platform: esp32_rmt_led_strip
+    rgb_order: GRB
+    pin: GPIO18
+    num_leds: 1
+    chipset: ws2812
+    name: "Status LED"
+    id: status_led
+
+
+# ----------------------
+# Binary sensors
+# ----------------------
+binary_sensor:
+
+  - platform: status
+    name: "ESP32 Status"
+    id: device_status
+
+  - platform: gpio
+    pin:
+      number: 0
+      mode: INPUT_PULLUP
+      inverted: True
+    name: "Button GPIO0"
+    on_press:
+      then:
+        - script.execute: led_status_script
+
+
+# ----------------------
+# LED Scripts
+# ----------------------
+script:
+  - id: led_status_script
+    mode: restart
+    then:
+      - if:
+          condition:
+            lambda: 'return id(device_status).state;'
+          then:
+            - logger.log: "HA connected → LED GREEN for 60s"
+            - light.turn_on:
+                id: status_led
+                brightness: 60%
+                red: 0.0
+                green: 1.0
+                blue: 0.0
+            - delay: 60s
+            - light.turn_off: status_led
+          else:
+            - logger.log: "HA NOT connected → LED ORANGE for 60s"
+            - light.turn_on:
+                id: status_led
+                brightness: 60%
+                red: 1.0
+                green: 0.5
+                blue: 0.0
+            - delay: 60s
+            - light.turn_off: status_led
+
+  - id: led_blue_blink
+    mode: restart
+    then:
+      - repeat:
+          count: 19
+          then:
+            - light.turn_on:
+                transition_length: 0.1s
+                id: status_led
+                brightness: 100%
+                red: 0.0
+                green: 0.0
+                blue: 1.0
+            - delay: 0.5s
+            - light.turn_off: status_led
+            - delay: 0.5s

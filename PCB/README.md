@@ -1,22 +1,59 @@
 # OpenTenki PCB
-<img src="../Media/PCB_CloseUp.jpg" width="400" alt="PCB picture">
-The components i have chose are:
 
-## Microcontroler
-  ### ESP32-s3-mini N4R2
-  This ic is great because with a small form-factor it has WiFi, Bluetooth, USB otg, 4Mb of Quad Flash, 2Mb of Quad PSRAM. And that compatible with EspHome, Tasmota, Arduino, CircuitPython and MicroPython.
-  
-## Sensors  
-All conected with i2c, SDA on pin IO3 and SCL on pin IO4
-  ### Bosch BME688 
-  This is use to monitor the air quality as well as presure, temperature and humidity 
-  ### VEML 7700 
-  With this sensor you can monitor Ambient ligth, Infrared and full spectrum ligth, is a cheap a reliable option 
-  ### HDH3022 
-  This last sensor can measure temperature and humidity much more precise than the BME688 and is way cheaper so if you dont need the air quality or the atmosferic presure its a great way, is also usefull for more precise measuremnts
+<img src="../Media/PCB_CloseUp.jpg" width="400" alt="PCB picture">
+
+This folder contains everything you need to manufacture the OpenTenki PCB.
+
+## Files
+
+- [`SchematicV2.pdf`](SchematicV2.pdf) — full schematic of the current revision.
+- [`PCB_OpenTenki.pdf`](PCB_OpenTenki.pdf) — PCB layout preview.
+- [`Gerber_PCB2_2026-04-26/`](Gerber_PCB2_2026-04-26) — production-ready Gerber
+  and drill files. See `How-to-order-PCB.txt` inside for the EasyEDA ordering
+  guide.
+- `OpenTenkiEasyEda.eprj` — full EasyEDA project, in case you want to modify the
+  design.
+
+## Components
+
+### Microcontroller
+
+#### ESP32-S3-mini N4R2
+
+This module is great because, in a small form factor, it provides Wi-Fi,
+Bluetooth, USB OTG, 4 MB of Quad Flash and 2 MB of Quad PSRAM. It is also
+compatible with ESPHome, Tasmota, Arduino, CircuitPython and MicroPython.
+
+### Sensors
+
+All sensors are connected over I²C, with **SDA on GPIO3** and **SCL on GPIO4**.
+
+#### Bosch BME688
+
+Used to monitor air quality, as well as pressure, temperature and humidity.
+
+#### VEML7700
+
+Measures ambient light, infrared and full-spectrum light. A cheap and reliable
+option.
+
+#### HDC3022
+
+This last sensor measures temperature and humidity much more precisely than the
+BME688 and is significantly cheaper, so if you don't need air quality or
+atmospheric pressure it's a great choice. It's also useful any time you want
+more precise readings.
 
 ## Extras
-  ### WS2812C on IO 33
-  Usualy know as neopixel, this is a small status LED it can be use for anything but its primary use is in ESPHome as is code so it shows the boot status and also it shows if its coneccted to HA when the button is press
-  ### Button on IO 0
-  This can be use to boot the board in flash mode and also a user button to know the status or to send a signal to your server
+
+### WS2812C on GPIO18
+
+Usually known as a NeoPixel, this small status LED can be used for anything,
+but its primary use is in ESPHome — the included configuration uses it to show
+boot status and to confirm Home Assistant connectivity when the user button is
+pressed.
+
+### Button on GPIO0
+
+Doubles as the bootloader button (to flash the board) and as a user button to
+check status or to trigger an action on your server.

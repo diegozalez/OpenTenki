@@ -1,14 +1,22 @@
-# Code OpenTenki
+# OpenTenki Firmware
 
-Here you can find all the integrations. In this proyect is very important to be as open as posible and make as compatible as posible so if there is any platform that you will like to be cover or that you can adpat to it let e know as it will make the proyect better.
+Here you can find all the firmware integrations for OpenTenki. In this project
+it is very important to be as open and as compatible as possible, so if there
+is a platform you would like covered (or that you can adapt OpenTenki to), let
+me know — it will only make the project better.
 
+## ESPHome / Home Assistant
 
-## EspHome-HomeAssitant
+The recommended path. The full implementation lives in
+[`EspHome/opentenki-v2.yaml`](EspHome/opentenki-v2.yaml) and works great: every
+sensor is exposed, the status LED is fully integrated, and pressing the
+on-board button confirms connectivity to Home Assistant. The board can also
+calculate indoor air quality (IAQ) through the BME688's BSEC2 stack.
 
-The implemantation is fully with EspHome, the .yaml is working great, Is the way i recomend to use OpenTenki as the led is perfectly integrated and with the press of the button on the board you can confirm conection to Home Assistant, also all the sensors work perfectly and can calculatethe air cuality
+## Tasmota — Coming Soon
 
-## Tasmota Coming Soon
+The board is compatible with Tasmota, but Tasmota does not yet fully support
+the ESP32-S3, so some errors are still possible. The configuration is being
+finalized and will be uploaded soon.
 
-The board is compatible with tasmota but Tasmota does not fully support the ESP32-s3 as of now there can be some errors, Im in the procces of finishing the configuration and uploadit 
-
-## Arduino Coming Soon
+## Arduino — Coming Soon
