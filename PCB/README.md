@@ -2,15 +2,7 @@
 
 <img src="../Media/FrontPCB.png" width="400" alt="PCB picture">
 
-## Files
 
-- [`SchematicV2.pdf`](SchematicV2.pdf) — full schematic of the current revision.
-- [`PCB_OpenTenki.pdf`](PCB_OpenTenki.pdf) — PCB layout preview.
-- [`Gerber_PCB2_2026-04-26/`](Gerber_PCB2_2026-04-26) — production-ready Gerber
-  and drill files. See `How-to-order-PCB.txt` inside for the EasyEDA ordering
-  guide.
-- [`OpenTenkiEasyEda.eprj`](OpenTenkiEasyEda.eprj) — full EasyEDA project, in case you want to modify the
-  design.
 
 ## Components
 
