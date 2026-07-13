@@ -1,6 +1,6 @@
 # OpenTenki PCB
 
-<img src="../Media/PCB_CloseUp.jpg" width="400" alt="PCB picture">
+<img src="../Media/FrontPCB" width="400" alt="PCB picture">
 
 This folder contains everything you need to manufacture the OpenTenki PCB.
 
