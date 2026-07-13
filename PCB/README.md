@@ -2,8 +2,6 @@
 
 <img src="../Media/FrontPCB.png" width="400" alt="PCB picture">
 
-This folder contains everything you need to manufacture the OpenTenki PCB.
-
 ## Files
 
 - [`SchematicV2.pdf`](SchematicV2.pdf) — full schematic of the current revision.
