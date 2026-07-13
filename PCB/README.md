@@ -1,6 +1,7 @@
 # OpenTenki PCB
 
 <img src="../Media/FrontPCB.png" width="400" alt="PCB picture">
+<img src="../Media/Scheatics.png" width="400" alt="PCB picture">
 
 
 
