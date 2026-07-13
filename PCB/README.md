@@ -9,7 +9,7 @@
 - [`Gerber_PCB2_2026-04-26/`](Gerber_PCB2_2026-04-26) — production-ready Gerber
   and drill files. See `How-to-order-PCB.txt` inside for the EasyEDA ordering
   guide.
-- `OpenTenkiEasyEda.eprj` — full EasyEDA project, in case you want to modify the
+- [`OpenTenkiEasyEda.eprj`](OpenTenkiEasyEda.eprj) — full EasyEDA project, in case you want to modify the
   design.
 
 ## Components
