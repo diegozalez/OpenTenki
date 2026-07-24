@@ -9,8 +9,8 @@
       Tasmota firmware, enabling easy integration with home automation systems
       via MQTT or Matter.
     </td>
-    <td valign="middle">
-      <img src="Media/CajaShow.png" width="400" alt="OpenTenki weather station">
+    <td valign="middle" width="50%">
+      <img src="Media/CajaShow.png" width="1000" alt="OpenTenki weather station">
     </td>
   </tr>
 </table>
