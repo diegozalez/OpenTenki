@@ -2,6 +2,9 @@
 
 <table>
   <tr>
+    <td valign="middle" width="50%">
+      <img src="Media/CajaShow.png" width="1000" alt="OpenTenki weather station">
+    </td>
     <td valign="middle">
       OpenTenki is an open-source, affordable, and precise indoor weather station
       hardware platform built around an ESP32-S3 mini and multiple environmental
@@ -9,24 +12,35 @@
       Tasmota firmware, enabling easy integration with home automation systems
       via MQTT or Matter.
     </td>
-    <td valign="middle" width="50%">
-      <img src="Media/CajaShow.png" width="1000" alt="OpenTenki weather station">
-    </td>
   </tr>
 </table>
 
 ## Features
 
-- Accurate environmental sensing with:
-  - VEML7700 (ambient light, infrared and full-spectrum light)
-  - BME688 (temperature, humidity, pressure, air quality)
-  - HDC3022 (high-precision temperature and humidity)
-  - WS2812C (NeoPixel) status LED
-  - User button for control and feedback
-- Based on the ESP32-S3 mini for robust Wi-Fi and Bluetooth connectivity
-- Fully open-source hardware and software
-- Designed for easy customization and extension
-- Supports MQTT and Matter protocols for data transmission
+<table>
+  <tr>
+    <td valign="middle">
+      <ul>
+        <li>Accurate environmental sensing with:
+          <ul>
+            <li>VEML7700 (ambient light, infrared and full-spectrum light)</li>
+            <li>BME688 (temperature, humidity, pressure, air quality)</li>
+            <li>HDC3022 (high-precision temperature and humidity)</li>
+            <li>WS2812C (NeoPixel) status LED</li>
+            <li>User button for control and feedback</li>
+          </ul>
+        </li>
+        <li>Based on the ESP32-S3 mini for robust Wi-Fi and Bluetooth connectivity</li>
+        <li>Fully open-source hardware and software</li>
+        <li>Designed for easy customization and extension</li>
+        <li>Supports MQTT and Matter protocols for data transmission</li>
+      </ul>
+    </td>
+    <td valign="middle" width="50%">
+      <img src="Media/CajaCable.jpg" width="1000" alt="OpenTenki assembled, powered over USB-C">
+    </td>
+  </tr>
+</table>
 
 ---
 
@@ -43,12 +57,22 @@
 
 ### Hardware
 
-<img src="Media/CajaCable.jpg" align="right" width="380" alt="OpenTenki assembled, powered over USB-C">
-
-- Order the PCB with the [Gerber files](PCB/Gerber_PCB2_2026-04-26) and the
-  [BOM](PCB/BOM_OpenTenki_PCB2_2026-07-24.xlsx) — see the [`PCB/`](PCB) folder
-  for the schematic, the interactive BOM and the full EasyEDA project.
-- 3D-print the [case](Case3D): three printed parts and one screw.
+<table>
+  <tr>
+    <td valign="middle" width="50%">
+      <img src="Media/FrontPCBT.png" width="1000" alt="OpenTenki PCB render">
+    </td>
+    <td valign="middle">
+      <ul>
+        <li>Order the PCB with the <a href="PCB/Gerber_PCB2_2026-04-26">Gerber files</a>
+          and the <a href="PCB/BOM_OpenTenki_PCB2_2026-07-24.xlsx">BOM</a> — see the
+          <a href="PCB">PCB folder</a> for the schematic, the interactive BOM and the
+          full EasyEDA project.</li>
+        <li>3D-print the <a href="Case3D">case</a>: three printed parts and one screw.</li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
 ### Firmware
 
