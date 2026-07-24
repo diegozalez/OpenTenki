@@ -13,10 +13,11 @@ sensor is exposed, the status LED is fully integrated, and pressing the
 on-board button confirms connectivity to Home Assistant. The board can also
 calculate indoor air quality (IAQ) through the BME688's BSEC2 stack.
 
-## Tasmota — Coming Soon
+## Tasmota
 
-The board is compatible with Tasmota, but Tasmota does not yet fully support
-the ESP32-S3, so some errors are still possible. The configuration is being
-finalized and will be uploaded soon.
+A working [basic template](Tasmota) is available: the BME688, HDC3022, user
+button and LED work out of the box (the VEML7700 needs a custom-compiled
+binary). Tasmota's ESP32-S3 support is still maturing, so expect some rough
+edges — feedback is welcome.
 
 ## Arduino — Coming Soon

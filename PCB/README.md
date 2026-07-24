@@ -1,9 +1,17 @@
 # OpenTenki PCB
 
 <img src="../Media/FrontPCB.png" width="400" alt="PCB picture">
-<img src="../Media/Scheatics.png" width="700" alt="PCB picture">
+<img src="../Media/Schematics.png" width="700" alt="Schematic">
 
+## Build your own
 
+Everything you need to order and assemble the board:
+
+- [**BOM (Excel)**](BOM_OpenTenki_PCB2_2026-07-24.xlsx) — full part list with LCSC part numbers.
+- [**Interactive BOM**](InteractiveBOM_PCB2_2026-4-25.html) — download and open in your browser to locate every component on the board. Very handy for hand soldering.
+- [**Gerber files**](Gerber_PCB2_2026-04-26) — ready to send to JLCPCB or any other PCB fab.
+- [**Schematic**](SchematicV2.pdf) and [**PCB preview**](PCB_OpenTenki.pdf) as PDF.
+- [**EasyEDA project**](OpenTenkiEasyEda.eprj) — the full editable design.
 
 ## Components
 

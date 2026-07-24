@@ -1,13 +1,25 @@
-# 3D Files for OpenTenki
+# OpenTenki 3D-Printed Case
 
-The case is 3D-printed in two parts — make sure you use matching pieces from
-the same revision.
+<img src="../Media/CaseAssembly.png" width="600" alt="The three printed parts, the PCB and the M2×10 screw">
 
-All the case files are designed in [Onshape](https://www.onshape.com/), and you
-are free to modify them or reuse them as you wish.
+The case consists of **three 3D-printed parts** that fit around the PCB and are
+secured with a single **M2×10 plastic screw**.
 
-## Upcoming — Ver2
+## What you need
 
-The Ver2 case (designed for the current PCB revision) is in progress and will
-be uploaded here shortly. To close the case you will need 4 × M2 × 10 plastic
-screws.
+- The three `.stl` files in this folder
+- An assembled OpenTenki PCB
+- 1 × M2×10 plastic screw
+
+## Print & assemble
+
+1. Print the three STL files — standard PLA or PETG settings work fine.
+2. Fit the PCB inside the case parts as shown in the picture above.
+3. Close the case with the M2×10 screw. Done!
+
+## Modifying the case
+
+The case is designed in [Onshape](https://www.onshape.com/) and the full
+assembly is included as a STEP file
+([`3D_PCB2_2026-04-23.step`](3D_PCB2_2026-04-23.step)), so you are free to
+modify or remix it as you wish.

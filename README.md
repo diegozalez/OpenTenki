@@ -1,23 +1,12 @@
 # OpenTenki 🚧 Construction in progress 🚧
 
-<table>
-  <tr>
-    <td style="vertical-align: middle;">
-      <p>
-        OpenTenki is an open-source, affordable, and precise indoor weather station
-        hardware platform built around an ESP32-S3 mini and multiple environmental
-        sensors. It is designed for hobbyists and is compatible with ESPHome and
-        Tasmota firmware, enabling easy integration with home automation systems
-        via MQTT or Matter.
-      </p>
-    </td>
-    <td>
-      <img src="Media/CajaShow.png" alt="OpenTenki Picture">
-    </td>
-  </tr>
-</table>
+<img src="Media/CajaCable.jpg" align="right" width="400" alt="OpenTenki in its 3D-printed case">
 
----
+OpenTenki is an open-source, affordable, and precise indoor weather station
+hardware platform built around an ESP32-S3 mini and multiple environmental
+sensors. It is designed for hobbyists and is compatible with ESPHome and
+Tasmota firmware, enabling easy integration with home automation systems
+via MQTT or Matter.
 
 ## Features
 
@@ -36,7 +25,7 @@
 
 ## Repository Structure
 
-- [`PCB/`](PCB) — Schematic, Gerber files, EasyEDA project and PCB renders
+- [`PCB/`](PCB) — Schematic, Gerber files, BOM, EasyEDA project and PCB renders
 - [`Code/`](Code) — Firmware integrations (ESPHome, Tasmota, more coming)
 - [`Case3D/`](Case3D) — 3D-printable case files
 - [`Media/`](Media) — Photos and renders of the board and case
@@ -47,10 +36,10 @@
 
 ### Hardware
 
-- See the [schematic](PCB/SchematicV2.pdf), the [PCB preview](PCB/PCB_OpenTenki.pdf)
-  and the [Gerber files](PCB/Gerber_PCB2_2026-04-26) in the [`PCB/`](PCB) folder.
-- The full EasyEDA project (`OpenTenkiEasyEda.eprj`) is included so you can open,
-  modify and re-export the design.
+- Order the PCB with the [Gerber files](PCB/Gerber_PCB2_2026-04-26) and the
+  [BOM](PCB/BOM_OpenTenki_PCB2_2026-07-24.xlsx) — see the [`PCB/`](PCB) folder
+  for the schematic, the interactive BOM and the full EasyEDA project.
+- 3D-print the [case](Case3D): three printed parts and one screw.
 
 ### Firmware
 
