@@ -37,7 +37,7 @@
       </ul>
     </td>
     <td valign="middle" width="50%">
-      <img src="Media/CajaCable.jpg" width="1000" alt="OpenTenki assembled, powered over USB-C">
+      <img src="Media/FrontPCBT.png" width="1000" alt="OpenTenki PCB render">
     </td>
   </tr>
 </table>
@@ -60,7 +60,7 @@
 <table>
   <tr>
     <td valign="middle" width="50%">
-      <img src="Media/FrontPCBT.png" width="1000" alt="OpenTenki PCB render">
+      <img src="Media/CajaCable.jpg" width="1000" alt="OpenTenki assembled, powered over USB-C">
     </td>
     <td valign="middle">
       <ul>
