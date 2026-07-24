@@ -1,6 +1,6 @@
 # OpenTenki 🚧 Construction in progress 🚧
 
-<img src="Media/CajaCable.jpg" align="right" width="400" alt="OpenTenki in its 3D-printed case">
+<img src="Media/CajaShow.png" align="right" width="400" alt="OpenTenki weather station">
 
 OpenTenki is an open-source, affordable, and precise indoor weather station
 hardware platform built around an ESP32-S3 mini and multiple environmental
@@ -35,6 +35,8 @@ via MQTT or Matter.
 ## Getting Started
 
 ### Hardware
+
+<img src="Media/CajaCable.jpg" align="right" width="380" alt="OpenTenki assembled, powered over USB-C">
 
 - Order the PCB with the [Gerber files](PCB/Gerber_PCB2_2026-04-26) and the
   [BOM](PCB/BOM_OpenTenki_PCB2_2026-07-24.xlsx) — see the [`PCB/`](PCB) folder
