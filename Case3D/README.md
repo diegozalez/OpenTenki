@@ -5,6 +5,9 @@
 The case consists of **three 3D-printed parts** that fit around the PCB and are
 secured with a single **M2×10 plastic screw**.
 
+You can also find this model on
+[Printables](https://www.printables.com/model/1790374-opentenki-case).
+
 ## What you need
 
 - The three `.stl` files in this folder
