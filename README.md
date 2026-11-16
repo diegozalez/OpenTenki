@@ -90,6 +90,18 @@
 
 ---
 
+## Home Assistant
+
+With the supported ESPHome config, OpenTenki integrates into
+[Home Assistant](https://www.home-assistant.io/) automatically — every sensor
+shows up as an entity, ready to chart, log and use in automations. Below is a
+full month of real data (temperature, humidity, pressure, air quality and
+light) collected by a single OpenTenki:
+
+<img src="Media/HAdata.png" width="750" alt="One month of OpenTenki sensor data in Home Assistant">
+
+---
+
 ## Contributing
 
 Contributions, bug reports and feature requests are more than welcome! Please
