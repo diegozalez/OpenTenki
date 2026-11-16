@@ -1,4 +1,4 @@
-# OpenTenki 🚧 Construction in progress 🚧
+# OpenTenki
 
 <table>
   <tr>
@@ -47,7 +47,7 @@
 ## Repository Structure
 
 - [`PCB/`](PCB) — Schematic, Gerber files, BOM, EasyEDA project and PCB renders
-- [`Code/`](Code) — Firmware integrations (ESPHome, Tasmota, more coming)
+- [`Code/`](Code) — Firmware (ESPHome supported; Tasmota and Arduino possible)
 - [`Case3D/`](Case3D) — 3D-printable case files
 - [`Media/`](Media) — Photos and renders of the board and case
 
@@ -76,9 +76,10 @@
 
 ### Firmware
 
-- Compatible with [ESPHome](https://esphome.io/) and
-  [Tasmota](https://tasmota.github.io/) out of the box.
-- Custom firmware (Arduino, etc.) is in development — contributions welcome!
+- [ESPHome](https://esphome.io/) is the officially supported firmware — a
+  ready-to-use config is in [`Code/EspHome/`](Code/EspHome).
+- [Tasmota](https://tasmota.github.io/) and Arduino also work, but are community
+  paths (not actively maintained). See [`Code/`](Code) for details.
 
 ### Usage
 
